@@ -256,10 +256,15 @@ resources:
       - key: startup-script
         value: |
           #!/bin/bash
+          sudo apt-get update
+          sudo apt install python3-pip -y
           sudo mkdir /home/labs
           cd /home/labs
           sudo git clone https://github.com/eorjuela/ISIS2503-Microservices-AppDjango.git
           cd ISIS2503-Microservices-AppDjango/places
+          sudo pip3 install -r requirements.txt
+          sudo python3 manage.py makemigrations
+          sudo python3 manage.py migrate
 
 - name: msd-measurements-ms
   type: compute.v1.instance
