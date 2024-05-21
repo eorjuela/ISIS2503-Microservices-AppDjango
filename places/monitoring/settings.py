@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': os.environ.get('PLACES_DB_NAME', 'places_db'),
         'USER': os.environ.get('PLACES_DB_USER', 'places_user'),
         'PASSWORD': os.environ.get('PLACES_DB_PASSWORD', 'isis2503'),
-        'HOST': os.environ.get('PLACES_DB_HOST', 'localhost'),
+        'HOST': os.environ.get('PLACES_DB_HOST', '10.128.0.90'),
         'PORT': '5432',
     }
 }
